@@ -1,142 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hoja de Vida - Jhair Martinez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Jhair Marvin Martinez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --accent: #58a6ff;
+            --accent-glow: #1f6feb;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f0f1a;
-    color: white;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
 
-header {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    text-align: center;
-    padding: 60px 20px;
-}
+        header {
+            background: linear-gradient(135deg, #000 0%, #161b22 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--accent);
+        }
 
-header h1 {
-    font-size: 40px;
-    margin: 0;
-    color: #9d4edd;
-}
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 15px var(--accent-glow);
+            background-color: #30363d;
+        }
 
-header p {
-    font-size: 18px;
-    color: #c77dff;
-}
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            font-size: 2.2rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
+        .subtitle {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
 
-.profile-text {
-    max-width: 500px;
-}
+        .contact-bar {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 1rem;
+        }
 
-.profile-text h2 {
-    color: #9d4edd;
-}
+        .contact-item {
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
 
-.profile-img img {
-    width: 250px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #9d4edd;
-}
+        .contact-item:hover {
+            color: var(--accent);
+            transform: scale(1.05);
+        }
 
-section {
-    padding: 40px;
-    border-top: 1px solid #2a2a40;
-}
+        .fa-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.2rem;
+        }
 
-section h2 {
-    color: #9d4edd;
-}
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-ul {
-    line-height: 1.8;
-}
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #1a1a2e;
-    color: #aaa;
-}
-</style>
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            font-size: 1.3rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '>';
+            color: var(--accent);
+            margin-right: 15px;
+        }
+
+        .motivation-full-text {
+            text-align: justify;
+            white-space: pre-line;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            padding: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #238636;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+            font-size: 0.8rem;
+        }
+
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 12px; }
+    </style>
 </head>
-
 <body>
 
 <header>
+    <img src="tu-foto.jpg" alt="Foto de Jhair Martinez" class="profile-img">
     <h1>Jhair Marvin Martinez Serrudo</h1>
-    <p>Estudiante de Ingeniería en Telecomunicaciones</p>
+    <div class="subtitle">Ingeniería en Telecomunicaciones</div>
+    
+    <div class="contact-bar">
+        <a href="mailto:jhairm.ms@gmail.com" class="contact-item"><i class="fas fa-envelope" style="color: #ea4335;"></i> jhairm.ms@gmail.com</a>
+        <a href="tel:73415681" class="contact-item"><i class="fas fa-phone" style="color: #34b7f1;"></i> 73415681</a>
+        <a href="https://instagram.com/jha_ir.m" class="contact-item"><i class="fab fa-instagram"></i> @jha_ir.m</a>
+    </div>
 </header>
 
 <div class="container">
-    <div class="profile-text">
-        <h2>Perfil Profesional</h2>
-        <p>
-            Estudiante de primer semestre de Ingeniería en Telecomunicaciones en la Universidad San Francisco Xavier de Chuquisaca.
-            Persona responsable, disciplinada y con fuerte interés en la innovación tecnológica.
-            Enfocado en el aprendizaje continuo en áreas como telecomunicaciones, robótica y domótica.
-        </p>
+
+    <div class="card">
+        <h2>Formación Académica</h2>
+        <p><strong>Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca</strong></p>
+        <p>Ingeniería en Telecomunicaciones - Primer Semestre <span class="badge">Gestión 2026</span></p>
+        <hr style="border: 0; border-top: 1px solid #30363d; margin: 20px 0;">
+        <p><strong>Educación Secundaria</strong></p>
+        <p>Colegio Luis Boeto</p>
     </div>
 
-    <div class="profile-img">
-        <img src="foto.jpg" alt="Foto de perfil">
+    <div class="card">
+        <h2>Habilidades e Idiomas</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <strong>Técnicas:</strong>
+                <ul>
+                    <li>🤖 Robótica y Domótica</li>
+                    <li>💡 Pensamiento Lógico</li>
+                    <li>📡 Infraestructura Tecnológica</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Idiomas:</strong>
+                <ul>
+                    <li>🇧🇴 Castellano (Nativo)</li>
+                    <li>🇺🇸 Inglés (Básico)</li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <div class="card">
+        <h2>Motivación para mi carrera</h2>
+        <div class="motivation-full-text">
+            Elegí la carrera de Ingeniería en Telecomunicaciones porque desde muy joven sentí una profunda curiosidad por la tecnología y la manera en que los dispositivos logran comunicarse entre sí. Siempre me llamó la atención cómo es posible transmitir información a grandes distancias en cuestión de segundos, conectando personas, empresas y países enteros. Mi interés se fortaleció cuando participé en cursos certificados de robótica y domótica.
+
+            Estas experiencias me permitieron comprender que la tecnología no solo se trata de teoría, sino de aplicar conocimientos para crear soluciones reales. Aprender a programar sistemas automatizados y observar cómo una idea puede transformarse en un proyecto funcional despertó en mí una verdadera pasión. La robótica representa para mí la combinación perfecta entre creatividad e ingeniería. Diseñar mecanismos que puedan ejecutar tareas específicas implica lógica, planificación y trabajo en equipo.
+
+            Además, la domótica me mostró cómo la tecnología puede mejorar la calidad de vida de las personas, optimizando recursos y aumentando la eficiencia en los hogares y edificios inteligentes. Considero que las telecomunicaciones son la base que permite que todas estas tecnologías funcionen correctamente. Sin redes eficientes, sin transmisión de datos estable y sin infraestructura adecuada, la innovación no podría desarrollarse plenamente.
+
+            Por ello, estudiar esta carrera significa prepararme para formar parte del avance tecnológico que transforma el mundo. También me motiva el constante desafío intelectual que implica esta profesión. Resolver problemas técnicos, analizar sistemas complejos y buscar soluciones innovadoras fortalece mi pensamiento lógico y mi disciplina. Me identifico con la idea de estar en aprendizaje continuo, adaptándome a nuevas tecnologías y tendencias.
+
+            Además, esta carrera me brinda la oportunidad de contribuir al desarrollo de mi entorno. En un mundo cada vez más digital, los ingenieros en telecomunicaciones cumplen un papel fundamental en la conectividad y en la implementación de soluciones tecnológicas modernas. 
+
+            En conclusión, elegí Ingeniería en Telecomunicaciones porque combina mi pasión por la tecnología, la robótica y la automatización con el deseo de crecer profesionalmente y aportar a la sociedad. Estoy convencido de que esta carrera me permitirá desarrollar habilidades técnicas y personales que serán clave para mi futuro y para enfrentar los retos del mundo tecnológico actual.
+        </div>
+    </div>
+
 </div>
 
-<section>
-    <h2>Formación Académica</h2>
-    <p><strong>Ingeniería en Telecomunicaciones</strong><br>
-    Universidad San Francisco Xavier de Chuquisaca<br>
-    Primer Semestre – Actualidad<br>
-    Sucre, Bolivia</p>
-
-    <p><strong>Educación Secundaria</strong><br>
-    Colegio Luis Boeto</p>
-
-    <p><strong>Cursos Complementarios</strong></p>
-    <ul>
-        <li>Curso certificado en Robótica</li>
-        <li>Curso certificado en Domótica</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Habilidades</h2>
-    <ul>
-        <li>Responsabilidad y disciplina</li>
-        <li>Trabajo en equipo</li>
-        <li>Pensamiento lógico</li>
-        <li>Adaptabilidad</li>
-        <li>Interés por la innovación tecnológica</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Objetivo Profesional</h2>
-    <p>
-        Desarrollarme como profesional en el área de telecomunicaciones,
-        adquiriendo conocimientos técnicos y prácticos que me permitan
-        aportar soluciones innovadoras en el ámbito tecnológico.
-    </p>
-</section>
-
 <footer>
-    © 2026 - Jhair Martinez | Ingeniería en Telecomunicaciones
+    © 2026 - Perfil Profesional de Jhair Martinez<br>
+    Sucre - Chuquisaca - Bolivia
 </footer>
 
 </body>
 </html>
+
